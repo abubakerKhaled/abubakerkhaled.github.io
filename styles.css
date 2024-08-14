@@ -8,27 +8,67 @@ body {
     background-color: #fff;
 }
 
+/* Add these new styles and modify the existing header and nav styles */
+
 header {
     background-color: #f2f2f2;
-    padding: 15px 20px;
+    padding: 0;
     border-bottom: 1px solid #e4e4e4;
 }
 
 nav {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
 }
 
 nav a {
-    color: #000;
+    color: #5f6368;
     text-decoration: none;
     margin-left: 15px;
     font-size: 13px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: #e8f0fe;
+    color: #1a73e8;
+    text-decoration: none;
 }
+
+nav a.active {
+    background-color: #1a73e8;
+    color: #ffffff;
+}
+
+/* Add this new class for a special highlight effect */
+nav a.highlight {
+    border: 1px solid #dadce0;
+    padding: 7px 11px;
+}
+
+nav a.highlight:hover {
+    border-color: #1a73e8;
+    box-shadow: 0 1px 3px rgba(26, 115, 232, 0.3);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+}
+
 
 main {
     flex-grow: 1;
